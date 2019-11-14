@@ -3,6 +3,37 @@
   margin: 0;
   padding: 0;
 }
-div {
+
+.container {
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.box {
+  position: relative;
   display: inline-block;
+}
+.box .discount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background-color: green;
+}
+.box:nth-child(even) .discount{
+  background-color: red;
+}
+.box .heart {
+  color: red;
+  position: absolute;
+  bottom: 1%;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  display: none;
+}
+.box:hover .heart {
+  display: block;
+  cursor: pointer;
 }
